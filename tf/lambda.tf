@@ -90,7 +90,7 @@ resource "aws_lambda_function_url" "function_url" {
 
 resource "aws_lambda_layer_version" "lambda_layer" {
   filename   = "../dist/lambda-layer.zip"
-  layer_name = "myapp-api-py-layer"
+  layer_name = "myapp-api-py-layer-${terraform.workspace}"
 
   source_code_hash    = local.layer_hash
   compatible_runtimes = ["python3.8"]
