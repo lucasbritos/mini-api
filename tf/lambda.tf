@@ -44,23 +44,10 @@ resource "aws_iam_policy" "iam_policy_for_lambda" {
                 "logs:PutLogEvents",
                 "logs:CreateLogStream",
                 "logs:CreateLogGroup",
-                "logs:PutLogEvents",
-                "dynamodb:DeleteItem",
-                "dynamodb:GetItem",
-                "dynamodb:PutItem",
-                "dynamodb:Scan",
-                "dynamodb:UpdateItem",
-                "dynamodb:Query",
-                "s3:GetObject",
-                "s3:ListBucket",
-                "s3:PutObject"
+                "logs:PutLogEvents"
           ],
           "Resource": [
-              "arn:aws:logs:*:*:*",
-              "${aws_dynamodb_table.tasks.arn}",
-              "${aws_dynamodb_table.tasks.arn}/index/*",
-              "${aws_s3_bucket.results.arn}",
-              "${aws_s3_bucket.results.arn}/*"
+              "arn:aws:logs:*:*:*"
           ]
         }
     ]
