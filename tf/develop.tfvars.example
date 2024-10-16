@@ -1,0 +1,3 @@
+REMOTE_JWKS_ENDPOINT="https://cognito-idp.us-east-1.amazonaws.com/us-east-1_ACpY0NsKJ/.well-known/jwks.json"
+LOGGING_LEVEL="DEBUG" # override base
+SERVER_DEBUG = "True"
